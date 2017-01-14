@@ -14,5 +14,16 @@
     "start": "node server.js"
   },
   "author": "Jose G. Annunziato",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jannunzi/web-dev-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jannunzi/web-dev-template/issues"
+  },
+  "homepage": "https://github.com/jannunzi/web-dev-template#readme"
 }
