@@ -1,7 +1,43 @@
 input.form-control {
     margin-bottom: 5px;
 }
-
+html{
+    height:100%;
+}
 body {
-    padding-top: 36px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    overflow-x:hidden;
+    height:100%;
+    margin:0px;
+}
+.navbar-default {
+    background-color: #337ab7;
+}
+
+.navbar-header .navbar-brand{
+    color:  white;
+}
+
+.navbar-default .navbar-text {
+    color: white;
+}
+
+.list-group-item {
+    border-style: none;
+}
+
+.navbar-default .navbar-text a{
+    color:  white;
+}
+.col-sm-4{
+    padding-right: 0px;
+}
+.fullscreen-cover,.extend-parent{
+    height:100%;
+}
+
+.col-border{
+    border-right-style:solid;
+    border-color:lightgray;
 }
