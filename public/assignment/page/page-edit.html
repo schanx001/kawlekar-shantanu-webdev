@@ -5,117 +5,121 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="../css/style.css" rel="stylesheet"/>
     <meta charset="UTF-8">
-    <title>Website New</title>
+    <title>Page Edit</title>
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top page-list">
     <div class="row container-fluid">
         <div class="col-sm-4 hidden-xs">
-            <div class="navbar-text pull-left">
-                <a href="website-list.html">
+           <div class="navbar-text pull-left page-text">
+                <a href="page-list.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
-            <div class="navbar-text pull-right">
-                <a href="website-new.html">
+            <div class="navbar-text pull-right page-text">
+                <a href="page-new.html">
                     <span class="glyphicon glyphicon-plus"></span>
                 </a>
             </div>
-            <div class="navbar-header">
-                <a class="navbar-brand">Websites</a>
+            <div class="navbar-header page-text">
+                <a class="navbar-brand">New Page</a>
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="navbar-text pull-left hidden-sm hidden-md hidden-lg">
-                <a href="website-list.html">
+            <div class="navbar-text pull-left hidden-sm hidden-md hidden-lg page-text">
+                <a href="page-list.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
-            <div class="navbar-text pull-right">
-                <a href="website-list.html">
+            <div class="navbar-text pull-right page-text">
+                <a href="page-list.html">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
             </div>
-            <div class="navbar-header">
-                <a class="navbar-brand">New Website</a>
+            <div class="navbar-header page-text">
+                <a class="navbar-brand">Edit Page</a>
             </div>
         </div>
     </div>
 </nav>
 
 <div class="row container-fluid fullscreen-cover">
-    <div class="col-sm-4 hidden-xs extend-parent col-border">
+    <div class="col-sm-4 hidden-xs extend-parent  col-border">
         <ul class="list-group">
             <li class="list-group-item">
-                <a href="../page/page-list.html">
+                <a href="../widget/widget-list.html">
                     Hello Moto
                 </a>
-                <a href="website-edit.html" class="pull-right">
+                <a href="page-edit.html" class="pull-right">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
             </li>
 
             <li class="list-group-item">
-                <a href="../page/page-list.html">
+                <a href="../widget/widget-list.html">
                     Just do it 1ce
                 </a>
-                <a href="website-edit.html" class="pull-right">
+                <a href="page-edit.html" class="pull-right">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
             </li>
 
             <li class="list-group-item">
-                <a href="../page/page-list.html">
+                <a href="../widget/widget-list.html">
                     Winter is coming!
                 </a>
-                <a href="website-edit.html" class="pull-right">
+                <a href="page-edit.html" class="pull-right">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
             </li>
 
             <li class="list-group-item">
-                <a href="../page/page-list.html">
+                <a href="../widget/widget-list.html">
                     I'm Loving it!
                 </a>
-                <a href="website-edit.html" class="pull-right">
+                <a href="page-edit.html" class="pull-right">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
             </li>
 
             <li class="list-group-item">
-                <a href="../page/page-list.html">
+                <a href="../widget/widget-list.html">
                     Hello World is too Mainstream!
                 </a>
-                <a href="website-edit.html" class="pull-right">
+                <a href="page-edit.html" class="pull-right">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
             </li>
 
             <li class="list-group-item">
-                <a href="../page/page-list.html">
+                <a href="../widget/widget-list.html">
                     I got a Job
                 </a>
-                <a href="website-edit.html" class="pull-right">
+                <a href="page-edit.html" class="pull-right">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
             </li>
         </ul>
 
     </div>
-    <div class="col-sm-8 srk-extend">
-        <label for="name">Website Name</label>
-        <input class="form-control" id="name" placeholder="Website Name">
-
-        <label for="description">Description</label>
-        <textarea class="form-control" id="description" placeholder="Description"></textarea>
+    <div class="col-sm-8 extend-parent">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" id="name" placeholder="Page Name">
+        </div>
+        <div class="form-group">
+            <label for="description">Title</label>
+            <textarea class="form-control" id="description" placeholder="Page Title"></textarea>
+        </div>
+        <a class="btn btn-danger btn-block"
+           href="page-list.html">Delete</a>
     </div>
 </div>
 
-
-<nav class="navbar navbar-default navbar-fixed-bottom">
+<nav class="navbar navbar-default navbar-fixed-bottom page-list">
     <div class="container-fluid">
-        <div class="navbar-text pull-right">
+        <div class="navbar-text pull-right page-text">
             <a href="../user/profile.html">
                 <span class="glyphicon glyphicon-user"></span>
             </a>
