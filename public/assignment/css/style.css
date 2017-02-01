@@ -69,3 +69,8 @@ a:hover{
 .srk-main-back{
     background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/sayagata-400px.png");
 }
+
+.srk-left-pad{
+    padding-left: 15px;
+
+}
