@@ -22,6 +22,10 @@ body {
     color: white;
 }
 
+.navbar-default .navbar-brand a{
+    color:white;
+}
+
 .list-group-item {
     border-style: none;
 }
@@ -73,8 +77,4 @@ a:hover{
 .srk-left-pad{
     padding-left: 15px;
 
-}
-
-.list-group-item{
-    padding:10px 0px
 }
