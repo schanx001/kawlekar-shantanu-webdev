@@ -1,11 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="WebAppMaker">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <title>Assignment Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <link href="css/style.css" rel="stylesheet"/>
+    <!-- controllers-->
+
+    <script src="views/user/controllers/login.controller.client.js"></script>
+    <script src="views/user/controllers/profile.controller.client.js"></script>
+    <script src="views/user/controllers/register.controller.client.js"></script>
+    <script src="views/website/controllers/website-list.controller.client.js"></script>
+    <script src="views/website/controllers/website-new.controller.client.js"></script>
+    <script src="views/website/controllers/website-edit.controller.client.js"></script>
+    <script src="views/page/controllers/page-list.controller.client.js"></script>
+    <script src="views/page/controllers/page-new.controller.client.js"></script>
+    <script src="views/page/controllers/page-edit.controller.client.js"></script>
+
+    <script src="views/widget/controllers/widget-list.controller.client.js"></script>
+    <script src="views/widget/controllers/widget-new.controller.client.js"></script>
+    <script src="views/widget/controllers/widget-edit.controller.client.js"></script>
+
+    <!--services-->
+
+    <script src="services/user.service.client.view.js"></script>
+    <script src="services/website.service.client.view.js"></script>
+    <script src="services/page.service.client.view.js"></script>
+    <script src="services/widget.service.client.view.js"></script>
+
 </head>
 <body>
-    <h1>Assignment Home Page</h1>
-    <a href="user/login.html">Assignment 2</a>
+    <div ng-view></div>
 </body>
 </html>

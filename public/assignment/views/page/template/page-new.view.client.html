@@ -1,0 +1,69 @@
+
+<nav class="navbar navbar-default navbar-fixed-top page-list">
+        <div class="row container-fluid">
+            <div class="col-sm-4 hidden-xs">
+                <div class="navbar-text pull-left page-text">
+                    <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                </div>
+                <div class="navbar-text pull-right page-text">
+                    <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </div>
+                <div class="navbar-header page-text">
+                    <a class="navbar-brand">Pages</a>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="navbar-text pull-left hidden-sm hidden-md hidden-lg page-text">
+                    <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                </div>
+                <div class="navbar-text pull-right page-text">
+                    <a ng-click="model.createPage(page)">
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </a>
+                </div>
+                <div class="navbar-header page-text">
+                    <a class="navbar-brand">New Page</a>
+                </div>
+            </div>
+        </div>
+</nav>
+
+<div class="row container-fluid fullscreen-cover">
+    <div class="col-sm-4 hidden-xs  extend-parent  col-border">
+        <ul class="list-group">
+            <li ng-repeat="page in model.pages" class="list-group-item">
+                <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}/widget">
+                    {{page.name}}
+                </a>
+                <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}" class="pull-right">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="col-sm-8 srk-extend">
+        <label for="name">Name</label>
+        <input ng-model="page.name"  class="form-control" id="name" placeholder="Page Name">
+
+        <label for="description">Title</label>
+        <textarea ng-model="page.description"  class="form-control" id="description" rows="3" placeholder="Page Title"></textarea>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom page-list">
+    <div class="container-fluid">
+        <div class="navbar-text pull-right page-text">
+            <a href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>

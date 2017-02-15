@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left srk-remove-margin">
+            <a href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+        <div class="navbar-text pull-right srk-remove-margin">
+            <a href="#/user/{{model.userId}}/website/new">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand">Websites</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <ul class="list-group srk-extend">
+        <li  ng-repeat="website in model.websites"  class="list-group-item">
+            <span>
+            <a href="#/user/{{model.userId}}/website/{{website._id}}/page">
+               {{website.name}}
+            </a>
+            <a href="#/user/{{model.userId}}/website/{{website._id}}" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+                </span>
+        </li>
+    </ul>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-text pull-right srk-remove-margin">
+            <a href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>

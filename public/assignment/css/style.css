@@ -17,7 +17,9 @@ body {
 .navbar-header .navbar-brand{
     color:  white;
 }
-
+.navbar-default .navbar-brand{
+    color:white;
+}
 .navbar-default .navbar-text {
     color: white;
 
