@@ -85,6 +85,11 @@
                 templateUrl: 'views/widget/template/widget-edit.view.client.html',
                 controller: "WidgetEditController",
                 controllerAs: "model"
+            })
+            .otherwise({
+                templateUrl: 'views/user/template/login.view.client.html',
+                controller: 'loginController',
+                controllerAs: 'model'
             });
 
     }

@@ -11,10 +11,14 @@
         vm.getYouTubeEmbedUrl = getYouTubeEmbedUrl;
         vm.getTrustedHtml = getTrustedHtml;
         vm.getWidgetTemplateUrl = getWidgetTemplateUrl;
-        vm.userId = $routeParams.uid;
-        vm.websiteId = $routeParams.wid;
-        vm.pageId = $routeParams.pid;
-        vm.widgets = WidgetService.findWidgetsByPageId(vm.pageId);
+
+        function init() {
+            vm.userId = $routeParams.uid;
+            vm.websiteId = $routeParams.wid;
+            vm.pageId = $routeParams.pid;
+            vm.widgets = WidgetService.findWidgetsByPageId(vm.pageId);
+        }
+        init();
 
         function getWidgetTemplateUrl(widgetType) {
             var url = 'views/widget/template/widget-'+widgetType+'.view.client.html';

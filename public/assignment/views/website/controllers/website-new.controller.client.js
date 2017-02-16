@@ -5,10 +5,10 @@
 
     function WebsiteNewController($routeParams, $location, WebsiteService) {
         var vm = this;
-        vm.userId = $routeParams.uid;
         vm.createWebsite = createWebsite;
 
         function init() {
+            vm.userId = $routeParams.uid;
             vm.websites = WebsiteService.findWebsitesByUser(vm.userId);
         }
         init();

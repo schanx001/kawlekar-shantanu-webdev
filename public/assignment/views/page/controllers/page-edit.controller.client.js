@@ -8,13 +8,13 @@
 
     function PageEditController($routeParams, $location, PageService) {
         var vm = this;
-        vm.userId = $routeParams.uid;
-        vm.websiteId = $routeParams.wid;
-        vm.pageId = $routeParams.pid;
         vm.deletePage = deletePage;
         vm.updatePage = updatePage;
 
         function init() {
+            vm.userId = $routeParams.uid;
+            vm.websiteId = $routeParams.wid;
+            vm.pageId = $routeParams.pid;
             vm.pages = PageService.findPageByWebsiteId(vm.websiteId);
             vm.page = PageService.findPageById(vm.pageId);
         }

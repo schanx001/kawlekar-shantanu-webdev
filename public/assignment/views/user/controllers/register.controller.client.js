@@ -23,7 +23,6 @@
                 }
                 else {
                     alert("user already exists");
-                }}
-        }
+                }}}
     }
 })();

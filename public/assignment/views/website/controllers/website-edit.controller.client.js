@@ -8,12 +8,12 @@
 
     function WebsiteEditController($routeParams, $location, WebsiteService) {
         var vm = this;
-        vm.userId = $routeParams.uid;
-        vm.websiteId = $routeParams.wid;
         vm.deleteWebsite = deleteWebsite;
         vm.updateWebsite = updateWebsite;
 
         function init() {
+            vm.userId = $routeParams.uid;
+            vm.websiteId = $routeParams.wid;
             vm.websites = WebsiteService.findWebsitesByUser(vm.userId);
             vm.website = WebsiteService.findWebsiteById(vm.websiteId);
         }

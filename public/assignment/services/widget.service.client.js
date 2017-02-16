@@ -44,12 +44,10 @@
             for(var w in widgets){
                 var widget_var=widgets[w];
                 if(widget_var._id === widgetId){
-          //        widgets[w]=widget;
-                    widgets[w].widgetType = widget.widgetType
-                    widgets[w].size = widget.size;
-                    widgets[w].text = widget.text;
-                    console.log(widgets[w]);
-                    return widgets[w];
+                        widgets[w].widgetType = widget.widgetType
+                        widgets[w].size = widget.size;
+                        widgets[w].text = widget.text;
+                        return widgets[w];
                 }
             }
             return null;

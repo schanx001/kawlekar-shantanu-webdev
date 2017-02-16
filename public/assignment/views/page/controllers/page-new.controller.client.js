@@ -8,16 +8,15 @@
 
     function PageNewController($routeParams, $location, PageService) {
         var vm = this;
-        vm.userId = $routeParams.uid;
         vm.createPage = createPage;
-        vm.websiteId = $routeParams.wid;
         function init() {
+            vm.websiteId = $routeParams.wid;
+            vm.userId = $routeParams.uid;
             vm.pages = PageService.findPageByWebsiteId(vm.websiteId);
         }
         init();
 
         function createPage (page) {
-            //vm.websites = WebsiteService.findAllWebsitesForUser(vm.userId);
             if(page!=null)
             {
                 PageService.createPage(vm.websiteId, page);
