@@ -2,6 +2,10 @@
     <div class="container">
 
         <h1>Register</h1>
+
+        <div ng-show="model.error" class="alert alert-danger" role="alert">
+            {{model.error}}
+        </div>
         <input  ng-model="model.user.username"
                 type="text"
                class="form-control"

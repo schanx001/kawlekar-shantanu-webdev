@@ -28,11 +28,12 @@
 
         function deleteWidget(){
             WidgetService.deleteWidget(vm.widgetId);
-            $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"widget");
+            $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget");
         }
 
 
         function updateWidget(){
+            console.log(vm.widget);
             WidgetService.updateWidget(vm.widgetId,vm.widget);
             $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget");
         }

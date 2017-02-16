@@ -11,16 +11,16 @@
     </div>
 </nav>
 
-<div class="alert alert-danger" ng-show="model.error">
-    {{model.error}}
-</div>
-
-<div class="alert alert-success" ng-show="model.message">
-    {{model.message}}
-</div>
 
 <div class="container">
 
+    <div class="alert alert-danger" ng-show="model.error">
+        {{model.error}}
+    </div>
+
+    <div class="alert alert-success" ng-show="model.message">
+        {{model.message}}
+    </div>
     <form>
         <div class="form-group">
             <label for="username">Username</label>
@@ -62,6 +62,9 @@
        class="btn btn-success btn-block">
         Update
     </a>
+    <a class="btn btn-warning  btn-block"
+       ng-click="model.deleteUser()">Unregister</a>
+
     <a class="btn btn-danger  btn-block"
        href="#/login">Logout</a>
 </div>

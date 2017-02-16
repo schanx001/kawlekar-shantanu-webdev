@@ -27,8 +27,8 @@
         return api;
 
         function createWidget(pageId,widget) {
-            widget.pageId = pageId;
-            widget._id = (new Date()).getTime().toString();
+            //widget.pageId = pageId;
+            //widget._id = (new Date()).getTime().toString();
             widgets.push(widget);
         }
 
@@ -44,9 +44,11 @@
             for(var w in widgets){
                 var widget_var=widgets[w];
                 if(widget_var._id === widgetId){
+          //        widgets[w]=widget;
                     widgets[w].widgetType = widget.widgetType
                     widgets[w].size = widget.size;
                     widgets[w].text = widget.text;
+                    console.log(widgets[w]);
                     return widgets[w];
                 }
             }

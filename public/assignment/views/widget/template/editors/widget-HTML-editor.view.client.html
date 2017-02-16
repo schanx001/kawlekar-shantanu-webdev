@@ -1,13 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top page-list">
     <div class="container-fluid">
         <div class="navbar-text pull-left page-text">
-            <a href="widget-list.view.client.html">
+            <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
         </div>
 
         <div class="navbar-text pull-right page-text">
-            <a href="widget-list.view.client.html">
+            <a ng-click="model.updateWidget()">
                 <span class="glyphicon glyphicon-ok"></span>
             </a>
         </div>
@@ -24,15 +24,13 @@
             <textarea ng-model="model.widget.text" id="text_id" rows="3" class="form-control" value="US senate will decide the fate of this new bill"></textarea>
         </div>
         <!--<a ng-click="model.updateWidget(model.widget)" class="btn btn-primary  btn-block" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Update</a>
-        --><a ng-click="model.deleteWidget()" class="btn btn-danger  btn-block" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Delete</a>
+        --><a ng-click="model.deleteWidget()" class="btn btn-danger  btn-block">Delete</a>
     </form>
 </div>
-
-
 <nav class="navbar navbar-default navbar-fixed-bottom page-list">
     <div class="container-fluid">
         <div class="navbar-text pull-right page-text">
-            <a href="../../../user/template/profile.view.client.html">
+            <a href="#/user/{{model.userId}}">
                 <span class="glyphicon glyphicon-user"></span>
             </a>
         </div>

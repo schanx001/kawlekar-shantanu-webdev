@@ -10,16 +10,20 @@
         var vm = this;
         vm.register = register;
         function register(user) {
-            var loginUser= UserService.findUserByCredentials(user.username,user.password);
-            if(loginUser===null){
-
-                newUser = UserService.createUser(user);
-                $location.url('/user/' + newUser._id);
+            if(user==null)
+            {
+                vm.error = "input empty! Please fill username and password";
             }
-            else{
-                alert("user already exists");
-            }
+            else {
+                var loginUser = UserService.findUserByCredentials(user.username, user.password);
+                if (loginUser === null) {
 
+                    newUser = UserService.createUser(user);
+                    $location.url('/user/' + newUser._id);
+                }
+                else {
+                    alert("user already exists");
+                }}
         }
     }
 })();
