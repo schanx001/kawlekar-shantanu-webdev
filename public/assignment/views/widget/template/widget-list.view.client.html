@@ -19,13 +19,14 @@
 </nav>
 
 <div class="container-fluid srk-extend">
+    <div class="widget-list" wbdv-sortable="">
     <div ng-repeat="widget in model.widgets">
 
     <div class="srk-toolbar">
             <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
                 <span class="glyphicon glyphicon-cog"></span>
             </a>
-            <span class="glyphicon glyphicon-align-justify"></span>
+            <a href=""> <span class="glyphicon glyphicon-align-justify"></span></a>
         </div>
         <div ng-switch="widget.widgetType">
             <div ng-switch-when="HEADER">
@@ -42,7 +43,7 @@
             </div>
         </div>
     </div>
-
+    </div>
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom page-list">

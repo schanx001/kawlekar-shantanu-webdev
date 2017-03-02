@@ -15,11 +15,13 @@
             vm.pageId = $routeParams.pid;
             vm.websiteId = $routeParams.wid
             vm.widgetId = $routeParams.wgid;
-            vm.widgets = WidgetService.findWidgetsByPageId(vm.pageId);
+            var promise = WidgetService.findWidgetsByPageId(vm.pageId);
+            promise
+                .success(function (widgets) {
+                    vm.widgets= widgets;
+                });
         }
-
         init();
-
 
         function createWidget(widgetType) {
             newWidget = {};
@@ -44,10 +46,15 @@
                     newWidget.text = "Default Text";
                     break;
             }
-            WidgetService.createWidget(vm.pageId, newWidget);
-            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget/" + newWidget._id);
+
+            WidgetService
+                .createWidget(newWidget,vm.pageId)
+                .success(function () {
+                    $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget/" + newWidget._id);
+                })
+                .error(function () {
+                    alert("widget not created");
+                });
         }
     }
-
-
 })();

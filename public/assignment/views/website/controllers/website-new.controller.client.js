@@ -9,17 +9,27 @@
 
         function init() {
             vm.userId = $routeParams.uid;
-            vm.websites = WebsiteService.findWebsitesByUser(vm.userId);
+            var promise = WebsiteService.findWebsitesByUser(vm.userId);
+            promise
+                .success(function (websites){
+                    vm.websites = websites;
+                });
         }
         init();
 
         function createWebsite (website) {
-            //vm.websites = WebsiteService.findAllWebsitesForUser(vm.userId);
             if(website!=null)
             {
-                WebsiteService.createWebsite(vm.userId, website);
+                WebsiteService
+                    .createWebsite(website, vm.userId)
+                    .success(function() {
+                        $location.url("/user/"+vm.userId+"/website");
+                    })
+                    .error(function () {
+                        alert("Sorry! Website not created");
+                    });
             }
-            $location.url("/user/"+vm.userId+"/website");
+
         };
     }
 })();

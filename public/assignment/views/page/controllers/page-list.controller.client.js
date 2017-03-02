@@ -10,10 +10,14 @@
         var vm = this;
 
         function init() {
-        vm.userId = $routeParams.uid;
-        vm.websiteId = $routeParams.wid;
-        vm.pages = PageService.findPageByWebsiteId(vm.websiteId);
-    }
-    init();
+            vm.userId = $routeParams.uid;
+            vm.websiteId = $routeParams.wid;
+            var promise = PageService.findPageByWebsiteId(vm.websiteId);
+            promise
+                .success(function (pages) {
+                    vm.pages=pages;
+                });
+        }
+        init();
     }
 })();

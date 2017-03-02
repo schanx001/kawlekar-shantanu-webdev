@@ -15,14 +15,20 @@
                 vm.error = "input empty! Please fill username and password";
             }
             else {
-                var loginUser = UserService.findUserByCredentials(user.username, user.password);
-                if (loginUser === null) {
-
-                    newUser = UserService.createUser(user);
-                    $location.url('/user/' + newUser._id);
-                }
-                else {
-                    alert("user already exists");
-                }}}
-    }
+                UserService
+                    .findUserByUsername(user.username)
+                    .success(function (user) {
+                        vm.error = "sorry that username is taken"
+                    })
+                    .error(function(){
+                        UserService
+                            .createUser(user)
+                            .success(function(user){
+                                $location.url('/profile/' + user._id);
+                            })
+                            .error(function () {
+                                vm.error = 'sorry could not register';
+                            });
+                    });
+            }}}
 })();

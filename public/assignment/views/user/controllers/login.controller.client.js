@@ -12,12 +12,20 @@
                 vm.error = "fill in the username and password";
             }
             else {
-                var loginUser = UserService.findUserByCredentials(user.username, user.password);
-                if (loginUser != null) {
-                    $location.url('/user/' + loginUser._id);
-                } else {
-                    vm.error = 'user not found';
-                }
+                var promise = UserService.findUserByCredentials(user.username, user.password);
+
+                promise
+                    .success(function (user) {
+                        if (user) {
+                            $location.url('/user/' + user._id);
+                        } else {
+                            vm.error = 'user not found';
+                        }
+
+                    })
+                    .error(function (er) {
+                        vm.error = "user not found";
+                    });
             }
         }
     }
