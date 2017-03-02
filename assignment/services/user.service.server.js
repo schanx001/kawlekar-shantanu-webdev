@@ -36,15 +36,10 @@ module.exports = function (app) {
 
     function updateUser(req, res) {
         var userId = req.params['userId'];
-        console.log(userId);
         for(var u in users) {
             var user = users[u];
             if( user._id === userId ) {
-                console.log('found user');
-                console.log(user);
-                console.log('new user');
                 var newUser = req.body;
-                console.log(newUser);
                 users[u].firstName = newUser.firstName;
                 users[u].lastName = newUser.lastName;
                 users[u].email = newUser.email;

@@ -48,17 +48,20 @@ module.exports = function (app) {
         if(req.file!=null) {
             var myFile = req.file;
         var destination = myFile.destination; // folder where file is saved to
-        console.log(req.body);
             for (var i in widgets) {
                 if (widgets[i]._id === widgetId) {
                     widgets[i].width = width;
                     widgets[i].url = req.protocol + '://' + req.get('host') + "/uploads/" + myFile.filename;
-                    console.log(widgets[i]);
                     pageId = widgets[i].pageId;
                 }
             }
             res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget");
         }
+        else{
+            pageId = req.body.pageId;
+            res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/"+widgetId);
+        }
+
     }
 
 
