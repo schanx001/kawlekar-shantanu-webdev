@@ -32,5 +32,4 @@ module.exports = function(model) {
     });
 
     return userSchema;
-}
-//module.exports = userSchema;
+};

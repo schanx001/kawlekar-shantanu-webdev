@@ -2,9 +2,9 @@
  * Created by schanx on 2/15/17.
  */
 (function(){
-        angular
-            .module("WebAppMaker")
-            .controller("WidgetEditController", WidgetEditController);
+    angular
+        .module("WebAppMaker")
+        .controller("WidgetEditController", WidgetEditController);
 
     function WidgetEditController($routeParams,$location, WidgetService) {
         var vm = this;
@@ -49,14 +49,13 @@
         function updateWidget(){
             WidgetService.updateWidget(vm.widget,vm.widgetId)
                 .success(function () {
-                    console.log(vm.widgetId+"  in update widget client side");
                     $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget");
                 })
                 .error(function () {
                     alert("widget not updated");
                 })
         }
-        
+
         function searchImage() {
             $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget/"+vm.widgetId+"/flickr");
         }

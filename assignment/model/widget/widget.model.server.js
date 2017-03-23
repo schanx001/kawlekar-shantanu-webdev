@@ -28,7 +28,6 @@ module.exports=function () {
     }
 
     function createWidget(pageId,widget){
-        console.log(widget);
         widget._page = pageId;
         return widgetModel
             .find({"_page": pageId})
@@ -45,8 +44,6 @@ module.exports=function () {
                                     page.widgets.push(newWidget._id);
                                     page.save();
                                     newWidget.save();
-                                    console.log(newWidget._id);
-                                    console.log(newWidget);
                                     return newWidget;
                                 }, function (err) {
                                     res.sendStatus(404);
@@ -76,7 +73,6 @@ module.exports=function () {
         return widgetModel.findById(widgetId);
     }
     function updateWidget(widgetId,updatedWidget){
-        console.log("insde update widget");
         return widgetModel.update({_id:widgetId},{$set:updatedWidget});
     }
 
@@ -95,16 +91,9 @@ module.exports=function () {
                 });
                 widget.remove();
             }
-            });
-
-           /* if(widget!=null){
-                widget.remove();
-            }
-        });*/
+        });
     }
     function reSortWidget(pageId, start, end) {
-        console.log(start);
-        console.log(end);
         return widgetModel
             .find({ _page: pageId}, function (err, widgets) {
                 widgets.forEach(function (widget) {
@@ -131,13 +120,4 @@ module.exports=function () {
                 });
             });
     }
-/*
-    function removeAllWidgets(pages) {
-        return widgetModel.remove({_page:{$in:pages}})
-            .then(function (response) {
-                res.sendStatus(200);
-            },function (err) {
-                res.sendStatus(404).send(err);
-            });
-    }*/
 };

@@ -37,11 +37,9 @@ module.exports= function() {
     }
 
     function createPage(websiteId,page) {
-        console.log(page);
         return pageModel
             .create(page)
             .then(function (newPage) {
-                console.log(newPage);
                 return model
                     .websiteModel
                     .findWebsiteById(websiteId)
@@ -50,7 +48,6 @@ module.exports= function() {
                         newPage._website=website._id;
                         website.save();
                         newPage.save();
-                        //console.log(newPage);
                         return newPage;
                     },function (err) {
                         return err;
@@ -59,7 +56,7 @@ module.exports= function() {
                 return err;
             });
     }
-    
+
     function updatePage(pageId,page) {
         return pageModel.update({_id:pageId},{$set:page});
     }

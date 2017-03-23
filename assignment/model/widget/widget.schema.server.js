@@ -30,16 +30,13 @@ module.exports=function (model) {
         var pageModel = model.pageModel.getModel();
         pageModel.findById(widget._page)
             .then(function(page){
-            var index =page.widgets.indexOf(widget._id);
-            console.log("inside wid sche"+index);
-            if(index > -1){
-                page.widgets.splice(index,1);
-                page.save();
-            }
-        });
-        //widgetModel.remove({'_id',{'$in':widget}})
+                var index =page.widgets.indexOf(widget._id);
+                if(index > -1){
+                    page.widgets.splice(index,1);
+                    page.save();
+                }
+            });
     });
 
-   return widgetSchema;
+    return widgetSchema;
 };
-//module.exports= widgetSchema;//function(){

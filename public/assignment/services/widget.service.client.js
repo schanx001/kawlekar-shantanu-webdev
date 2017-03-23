@@ -31,15 +31,12 @@
             return $http.get('/api/widget/'+widgetId);
         }
         function updateWidget(widget, widgetId) {
-            //console.log("in here");
             return $http.put('/api/widget/'+widgetId,widget);
         }
         function updateWidgetOrder(pageId, startIndex, endIndex) {
             return $http.put("/page/" + pageId + "/widget?initial=" + startIndex + "&final=" + endIndex);
         }
-        /*function updateWidget(websiteId, pageId, widgetId, {url: url}){
-            return $http.put('/api/widget/'+widgetId+'/flickr',websiteId,pageId,{url: url});
-        }*/
+
 
     }
 })();

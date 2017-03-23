@@ -11,26 +11,6 @@ module.exports=function(model) {
         widgets: [{type: mongoose.Schema.Types.ObjectId, ref: 'widgetModel'}],
         dateCreated: {type: Date, default: Date.now()}
     }, {collection: "assignment.mongo.pages"});
-//    return pageSchema;
-//};
-
-    /*pageSchema.post('remove', function () {
-        var model = require('./models.server')();
-        var page = this;
-    */    //var websiteModel = require('../website/website.model.server')();
-        //var widgetModel = require('../widget/widget.model.server')();
-      /*  websiteModel.findWebsiteById(page._website)
-            .then(function (website) {
-                var index = website.pages.indexOf(page._id);
-                if (index > -1) {
-                    website.pages.splice(index, 1);
-                    website.save();
-                }
-            });
-      */  //widgetModel.findAllWidgetsForPage(page._id).remove().exec();
-        //model.widgetModel.remove({'_id',{'$in':widget}})
-        //next();
-    //});
 
     pageSchema.post('remove', function () {
         var page = this;
@@ -50,4 +30,3 @@ module.exports=function(model) {
 
     return pageSchema;
 };
-//module.exports = pageSchema;

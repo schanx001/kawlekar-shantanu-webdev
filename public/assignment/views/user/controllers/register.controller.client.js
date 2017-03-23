@@ -21,7 +21,6 @@
                         vm.error = "sorry that username is taken"
                     })
                     .error(function(){
-                        console.log("errrrorororror");
                         UserService
                             .createUser(user)
                             .success(function(user){
