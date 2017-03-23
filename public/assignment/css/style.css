@@ -63,6 +63,7 @@ body {
     padding-bottom: 5px;
     border-bottom-left-radius: 5px;
     opacity: 0.7;
+    z-index: 1;
 }
 
 .srk-extend{
@@ -80,4 +81,18 @@ a:hover{
 .srk-left-pad{
     padding-left: 15px;
 
+}
+.youtube-widget {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.youtube-widget iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*width: 100%;
+    */
+    height: 100%;
 }

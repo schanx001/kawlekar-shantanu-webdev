@@ -25,8 +25,8 @@
 
         function createWidget(widgetType) {
             newWidget = {};
-            newWidget._id = (new Date()).getTime().toString();
-            newWidget.widgetType = widgetType;
+            //newWidget._id = (new Date()).getTime().toString();
+            newWidget.type = widgetType;
             newWidget.pageId = vm.pageId;
 
             switch (widgetType) {
@@ -45,11 +45,15 @@
                 case "HTML":
                     newWidget.text = "Default Text";
                     break;
+                case "TEXT":
+                    newWidget.text = "Default Text";
+                    break;
             }
 
             WidgetService
                 .createWidget(newWidget,vm.pageId)
-                .success(function () {
+                .success(function (newWidget) {
+
                     $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget/" + newWidget._id);
                 })
                 .error(function () {

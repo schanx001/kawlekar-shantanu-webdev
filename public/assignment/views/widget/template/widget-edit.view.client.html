@@ -18,18 +18,21 @@
 
 <div class="container-fluid">
 
-    <div ng-switch="model.widget.widgetType">
+    <div ng-switch="model.widget.type">
         <div ng-switch-when="HEADER">
-            <div ng-include="model.getEditorTemplateUrl(model.widget.widgetType)"></div>
+            <div ng-include="model.getEditorTemplateUrl(model.widget.type)"></div>
         </div>
         <div ng-switch-when="IMAGE">
-            <div ng-include="model.getEditorTemplateUrl(model.widget.widgetType)"></div>
+            <div ng-include="model.getEditorTemplateUrl(model.widget.type)"></div>
         </div>
         <div ng-switch-when="HTML">
-            <div ng-include="model.getEditorTemplateUrl(model.widget.widgetType)"></div>
+            <div ng-include="model.getEditorTemplateUrl(model.widget.type)"></div>
         </div>
         <div ng-switch-when="YOUTUBE">
-            <div ng-include="model.getEditorTemplateUrl(model.widget.widgetType)"></div>
+            <div ng-include="model.getEditorTemplateUrl(model.widget.type)"></div>
+        </div>
+        <div ng-switch-when="TEXT">
+            <div ng-include="model.getEditorTemplateUrl(model.widget.type)""></div>
         </div>
     </div>
 </div>
