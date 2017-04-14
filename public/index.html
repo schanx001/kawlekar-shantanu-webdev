@@ -2,43 +2,378 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
     <link href="assignment/css/style.css" rel="stylesheet"/>
+    <link href="assignment/css/animations.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="assignment/js/scrolling.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <meta charset="UTF-8">
+
     <title>Web Dev Course Home Page</title>
 </head>
 <body class="srk-main-back">
-<nav class="navbar navbar-default navbar-fixed-top">
-
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md navbar-light bg-faded">
+    <div class="container-fluid">
     <div class="navbar-header">
-        <a class="navbar-brand"> Web Dev Course Home Page</a>
-    </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand name-header animated fadeIn"  href="#">
+            <label>Shantanu R Kawlekar</label>
 
+        </a>
+    </div>
+        <div class="collapse navbar-collapse animated lightSpeedIn" id="navbarNav">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#para">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item"  >
+                    <a class="nav-link" href="project/index.html">Project</a>
+                </li>
+                <li class="nav-item"  >
+                    <a class="nav-link" href="assignment/index.html">Assignment</a>
+                </li>
+
+                <!--<li>
+                    <a class="nav-link" href="test/index.html">Test MongoDB</a>
+                </li>
+                -->
+                <li class="nav-item  ">
+                    <a class="nav-link" href="https://github.com/schanx001/kawlekar-shantanu-webdev">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#contactme">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 
 </nav>
 
-    <div class="container-fluid srk-extend">
+    <div class="container-fluid srk-extend extend-parent">
+
+        <div class="parallax parallax-1 animated fadeIn img-fluid" id="para">
+            <img class="img-rounded logo" src="assignment/css/neu.png">
 
 
+        </div>
+
+        <div id="page1" class="alert-danger">
+            <a id="education" class="smooth"></a>
+            <div class="container">
+            <h1 class="text-primary">Education</h1>
+
+
+                <div class="bg-success text-white">
+                    <h3>Northeastern University</h3>
+                    <h4>Boston, Masschusetts</h4>
+                    <h4>College of Computer and Information Science</h4>
+                    <h5><strong>Candidate for Master of Science in Computer Science</strong></h5>
+                    <h5>Sept 2016 to Present</h5>
+                    <h5>Courses taken</h5>
+                    <ul>
+                        <li>
+                            Programming Design Paradigms
+                        </li>
+                        <li>
+                            Information Retrieval
+                        </li>
+                        <li>
+                            Algorithms
+                        </li>
+                        <li>
+                            Web Development
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-info text-white ">
+                    <h3>University Of Mumbai</h3>
+                    <h4>Mumbai, India</h4>
+                    <h4>D. J. Sanghvi College Of Engineering</h4>
+                    <h5><strong>Bachelors in Information Technology</strong></h5>
+                    <h5>Aug 2013 to June 2016</h5>
+                    <h5>Courses taken</h5>
+                    <ul>
+                        <li>
+                            Object Oriented Programming
+                        </li>
+                        <li>
+                            Data Mining
+                        </li>
+                        <li>
+                            Big Data Analytics
+                        </li>
+                        <li>
+                            Cloud Computing
+                        </li>
+                        <li>
+                            Advanced Database Management Systems
+                        </li>
+                        <li>
+                            Distributed Systems
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-warning text-white">
+                        <h3>Shri Bhagubhai Mafatlal Polytechnic</h3>
+                        <h4>Mumbai, India</h4>
+                        <h5><strong>Diploma in Information Technology</strong></h5>
+                        <h5>Aug 2010 to June 2013</h5>
+                        <h5>Courses taken</h5>
+                        <ul>
+                            <li>
+                                Software Engineering
+                            </li>
+                            <li>
+                                Programming in C++
+                            </li>
+                            <li>
+                                Linux Administration
+                            </li>
+                            <li>
+                                System Programming
+                            </li>
+                            <li>
+                                Database Management Systems
+                            </li>
+                            <li>
+                                Computer Graphics
+                            </li>
+                        </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="parallax parallax-2 animated fadeIn img-fluid" id="para">
+        </div>
+
+        <div class="parallax parallax-4 animated fadeIn img-fluid" id="para"><!--id="page3">-->
+            <a id="projects" class="smooth"></a>
+            <div class="container">
+            <h1 >Projects</h1>
+
+                <div class="whitey word-wrap">
+                    <h3>BookHub</h3>
+                    <h4>Jan 2017 to April 2017</h4>
+                    <ul>
+                        <li>
+                            <h4> Built a web application platform for book lovers to encourage sharing and reusing books.</h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Used MongoDb, AngularJs, NodeJs, ExpressJs and PassportJs</h4>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="whitey word-wrap">
+                    <h3>Outlier</h3>
+                    <h4>Feb 2017</h4>
+                    <ul>
+                        <li>
+                            <h4>Developed an Anomaly Detection system using machine learning with Python to alert users of possible
+                                unusual activity.</h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Used Python, Pandas, Firebase, Android, Jupyter Notebook, Kalman Filter Algo.</h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Won the “Special Mention” prize at HackNeu 2017.
+                            </h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="whitey word-wrap">
+                    <h3>Information Retrieval System</h3>
+                    <h4>Sep 2016 to Dec 2016</h4>
+                    <ul>
+                        <li>
+                            <h4>Developed a retrieval system that performs extraction, parsing, stopping, stemming, indexing, ranking, query expansion and
+                                retrieval using Beautiful Soup.</h4>
+                        </li>
+                        <li>
+                            <h4>Implemented 4 baseline search engines using BM25, tf-idf, cosine similarity models in Python and Apache Lucene in Java.</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>MaePro</h3>
+                    <h4>Nov 2016</h4>
+                    <ul>
+                        <li>
+                            <h4> Created a responsive web application (using Google Geocoding API, PHP, Bootstrap, AJAX, HTML, CSS, MySQL) with an
+                                intuitive user interface to solve a challenge proposed by Fannie Mae at the Yale Hackathon.</h4>
+                        </li>
+                        <li>
+                            <h4>Designed a dashboard user interface and provided location based search capabilities on maps for enhanced user experience.</h4>
+                        </li>
+
+                        <li>
+                            <h4>Wrote server side logic in PHP for role based user access and reverse auction based interaction between users.</h4>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>Virtual Chef</h3>
+                    <h4>July 2015 to May 2016</h4>
+                    <ul>
+                        <li>
+                            <h4>Developed a lightweight Android Application (using MVC framework) in Java to provide users with recipes based on the
+                                ingredients available in their kitchen along with real-time recipe assistance and won 1 st prize at the IIT Bombay Hackathon.</h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Implemented the real-time recipe assistance module with android notifications and timer object.</h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Designed an interactive navigation drawer based user interface along with fragments and parsed the JSON data obtained from
+                                RESTful web services for rendering data into the engaging layouts created.
+                            </h4>
+                        </li>
+                    </ul>
+                    <div class="whitey word-wrap">
+                    <h3>Other Projects</h3>
+                    <ul>
+                        <li><h4>Page Ranking and Indexing</h4></li>
+                        <li><h4>Karya Nirnaya (Decision Making)</h4></li>
+                        <li><h4>WebAppMaker</h4></li>
+                        <li><h4>Speak to Secure</h4></li>
+                    </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="parallax parallax-3 animated fadeIn img-fluid" id="para">
+            <a id="skills" class="smooth"></a>
+            <div class="container">
+                <h1>Technical Skills</h1>
+
+                <div class="whitey word-wrap">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>
+                            <h4>C  | C++ | JAVA | PHP | PYTHON | R | RACKET</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>Systems</h3>
+                    <ul>
+                        <li>
+                            <h4>WINDOWS | LINUX(UBUNTU)</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>
+                            <h4>Android Studio | PyCharm | Git | Webstorm</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>Databases & Platforms</h3>
+                    <ul>
+                        <li>
+                            <h4> Oracle | MySql | Access | MongoDb | Mongoose | Heroku</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>Web Technologies</h3>
+                    <ul>
+                        <li>
+                            <h4> MEAN STACK | CSS3 | HTML5 | AJAX } BOOTSTRAP | Jquery</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="whitey word-wrap">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>
+                            <h4>Introduction to R , Up And Running With Python</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="alert-warning whitey">
+            <a id="contactme" class="smooth"></a>
+
+            <div class="container">
+            <h1>Contact Me</h1>
+            <ul class="txt-look">
+
+            <li><a href="https://www.facebook.com/shantanu.kawlekar.1" class="fa fa-facebook"></a></li>
+            <li><a href="https://plus.google.com/u/0/+shantanukawlekar001" class="fa fa-google"></a></li>
+            <li><a href="https://www.linkedin.com/in/shantanukawlekar001/" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.instagram.com/schanx_001/" class="fa fa-instagram"></a></li>
+
+            </ul>
+
+                <a href="http://bit.ly/2oHQ3eK" class="btn btn-block btn-primary btn-lg resume">
+                    <span class="glyphicon glyphicon-download-alt"></span> <h3>Download Resume</h3>
+
+                </a>
+    </div>
+    </div>
+<!--
     <h2 class="bg-success">My Work</h2>
+-->
+        <!--
     <ul class="nav nav-pills nav-stacked" role="tablist">
-        <li>
-            <a href="project/index.html">Project</a>
-        </li>
-        <li>
-            <a href="assignment/index.html">Assignment</a>
-        </li>
-        <li>
-            <a href="test/index.html">Test MongoDB</a>
-        </li>
-        <li>
-            <a href="https://github.com/schanx001/kawlekar-shantanu-webdev">Public repository at GitHub.com</a>
-        </li>
-    </ul>
+
+    </ul>-->
     </div>
 
-<nav class="navbar navbar-default navbar-fixed-bottom">
-
+<nav class="navbar navbar-inverse navbar-fixed-bottom navbar-toggleable-md navbar-light bg-faded">
+   <div class="container-fluid">
+       <h5><strong>&copy; CopyRight Shantanu Kawlekar 2017</strong></h5></div>
 </nav>
+
 </body>
 </html>
+
