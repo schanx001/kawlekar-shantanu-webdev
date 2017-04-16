@@ -278,8 +278,8 @@ tbody{
     text-align:center;
 }
 .txt-look > li{
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
     display:inline;
 }
 
